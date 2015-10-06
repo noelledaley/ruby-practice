@@ -1,6 +1,5 @@
 def all_odd(number_list)
 
-
     # Return a list of only the odd numbers in the input list.
     #
     #     >>> all_odd([1, 2, 7, -5])
@@ -9,8 +8,14 @@ def all_odd(number_list)
     #     >>> all_odd([2, -6, 8])
     #     []
 
+    odds = []
+    number_list.each do |num|
+      if num % 2 !=0
+        odds.push(num)
+      end
+    end
 
-
+  end
 
 
 def all_even(number_list)
@@ -23,8 +28,14 @@ def all_even(number_list)
     #     >>> all_even([-1, 3, 5])
     #     []
 
+    evens = []
+    number_list.each do |num|
+      if num % 2 == 0
+        odds.push(num)
+      end
+    end
 
-
+  end
 
 
 def print_indeces(my_list)
@@ -46,9 +57,6 @@ def print_indeces(my_list)
     # 2 Volvo
 
 
-
-
-
 def long_words(word_list)
 
     # Return all words in input list that are longer than 4 characters.
@@ -58,8 +66,6 @@ def long_words(word_list)
     #
     #     >>> long_words(["all", "are", "tiny"])
     #     []
-
-
 
 
 def smallest_int(number_list)
@@ -75,8 +81,6 @@ def smallest_int(number_list)
     #     True
 
 
-
-
 def largest_int(number_list)
 
     # Find the largest integer in a list of integers and return it.
@@ -88,9 +92,6 @@ def largest_int(number_list)
     #
     #     >>> largest_int([]) is None
     #     True
-
-
-
 
 
 def halvesies(number_list)
@@ -106,18 +107,12 @@ def halvesies(number_list)
     #     [0.5, 2.5]
 
 
-
-
-
 def word_lengths(word_list)
 
     # Return the length of words in the input list.
     #
     #     >>> word_lengths(["hello", "hey", "hello", "spam"])
     #     [5, 3, 5, 4]
-
-
-
 
 
 def sum_numbers(number_list)
@@ -131,7 +126,6 @@ def sum_numbers(number_list)
     #
     #     >>> sum_numbers([])
     #     0
-
 
 
 def mult_numbers(number_list)
@@ -152,8 +146,6 @@ def mult_numbers(number_list)
     #     1
 
 
-
-
 def join_strings(word_list)
 
     # Return a string of all input strings joined together.
@@ -164,8 +156,6 @@ def join_strings(word_list)
     #
     #     >>> join_strings([])
     #     ''
-
-
 
 
 def average(number_list)
