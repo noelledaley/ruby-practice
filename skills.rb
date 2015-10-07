@@ -56,6 +56,11 @@ def print_indeces(my_list)
     # 1 Jeep
     # 2 Volvo
 
+    my_list.each_with_index { |val, index| puts "#{index} #{val}" }
+
+  end
+
+
 
 def long_words(word_list)
 
