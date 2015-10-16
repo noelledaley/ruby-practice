@@ -151,6 +151,14 @@ def word_lengths(word_list)
     #     >>> word_lengths(["hello", "hey", "hello", "spam"])
     #     [5, 3, 5, 4]
 
+    lengths = []
+    word_list.each do |word|
+      lengths.push(word.length)
+    end
+
+    return lengths
+  end
+
 
 def sum_numbers(number_list)
 
