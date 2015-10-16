@@ -82,7 +82,6 @@ def long_words(word_list)
   end
 
 
-
 def smallest_int(number_list)
 
     # Find the smallest integer in a list of integers and return it.
@@ -94,6 +93,15 @@ def smallest_int(number_list)
     #
     #     >>> smallest_int([]) is None
     #     True
+
+    # number_list.min OR
+    if number_list.length >= 1
+      number_list.sort!
+      return number_list[0]
+    else
+      return nil
+  end
+end
 
 
 def largest_int(number_list)
