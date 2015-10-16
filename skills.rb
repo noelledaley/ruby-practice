@@ -136,6 +136,13 @@ def halvesies(number_list)
     #     >>> halvesies([1, 5])
     #     [0.5, 2.5]
 
+    halves = []
+    number_list.each do |num|
+      halves.push(num.to_f/2)
+    end
+    return halves
+  end
+
 
 def word_lengths(word_list)
 
