@@ -14,7 +14,7 @@ def all_odd(number_list)
         odds.push(num)
       end
     end
-
+    return odds
   end
 
 
@@ -34,7 +34,7 @@ def all_even(number_list)
         odds.push(num)
       end
     end
-
+    return evens
   end
 
 
@@ -71,6 +71,16 @@ def long_words(word_list)
     #
     #     >>> long_words(["all", "are", "tiny"])
     #     []
+    long_words = []
+    word_list.each do |word|
+      if word.length > 4
+        long_words.push(word)
+      end
+    end
+
+    return long_words
+  end
+
 
 
 def smallest_int(number_list)
