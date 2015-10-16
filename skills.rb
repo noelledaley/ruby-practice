@@ -116,6 +116,13 @@ def largest_int(number_list)
     #     >>> largest_int([]) is None
     #     True
 
+    if number_list.length >= 1
+      number_list.sort!
+      return number_list[-1]
+    else
+      return nil
+    end
+  end
 
 def halvesies(number_list)
 
