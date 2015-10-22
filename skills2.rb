@@ -36,10 +36,14 @@ end
 
 puts 'find_unique_common_items failed!' unless find_unique_common_items([1, 2, 3, 4], [1, 1, 2, 2]) == [1, 2]
 
-# def get_sum_zero_pairs(input_list):
-#     # Given a list of numbers, return list of x,y number pair lists where x + y == 0.
+def get_sum_zero_pairs(input_list)
+    # Given a list of numbers, return list of x,y number pair lists where x + y == 0.
 
-# end
+    zero_pairs = input_list.select {|num| input_list.include?(-num) unless num == 0}
+
+end
+
+puts 'get_zero_sum_pairs failed!' unless get_sum_zero_pairs([7, -7, 0, 3, 5, -3, 1]) == [7, -7, 3, -3]
 
 # def encode(phrase):
 #     # Given a phrase, replace all "e" characters with "p",
