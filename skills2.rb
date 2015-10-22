@@ -1,6 +1,10 @@
 def count_unique(input_string):
     # Count unique words in a string.
 
+    words = input_string.split()
+
+    unique = words.uniq.size
+end
 
 
 def find_common_items(list1, list2):
