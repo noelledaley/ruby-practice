@@ -1,10 +1,15 @@
 def count_unique(input_string)
     # Count unique words in a string.
 
+    input_string.downcase!
     words = input_string.split()
 
     unique = words.uniq.size
 end
+
+puts 'Test count_unique'
+puts count_unique("A rose is a rose") == 3
+puts "****"
 
 
 def find_common_items(list1, list2)
@@ -22,7 +27,9 @@ def find_common_items(list1, list2)
     common_items
 end
 
+puts 'Test find_common_items'
 puts find_common_items([1, 2, 3, 4], [1, 1, 2, 2]) == [1, 1, 2 ,2]
+puts "****"
 
 
 def find_unique_common_items(list1, list2)
@@ -30,6 +37,7 @@ def find_unique_common_items(list1, list2)
 
     list1 & list2
 end
+
 
 
 # def get_sum_zero_pairs(input_list):
