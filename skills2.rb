@@ -7,9 +7,7 @@ def count_unique(input_string)
     unique = words.uniq.size
 end
 
-puts 'Test count_unique'
-puts count_unique("A rose is a rose") == 3
-puts "****"
+puts 'count_unique failed!' unless count_unique("A rose is a rose") == 3
 
 
 def find_common_items(list1, list2)
@@ -27,9 +25,7 @@ def find_common_items(list1, list2)
     common_items
 end
 
-puts 'Test find_common_items'
-puts find_common_items([1, 2, 3, 4], [1, 1, 2, 2]) == [1, 1, 2 ,2]
-puts "****"
+puts 'find_common_items failed!' unless find_common_items([1, 2, 3, 4], [1, 1, 2, 2]) == [1, 1, 2 ,2]
 
 
 def find_unique_common_items(list1, list2)
@@ -38,7 +34,7 @@ def find_unique_common_items(list1, list2)
     list1 & list2
 end
 
-
+puts 'find_unique_common_items failed!' unless find_unique_common_items([1, 2, 3, 4], [1, 1, 2, 2]) == [1, 2]
 
 # def get_sum_zero_pairs(input_list):
 #     # Given a list of numbers, return list of x,y number pair lists where x + y == 0.
