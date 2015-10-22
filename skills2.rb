@@ -15,7 +15,7 @@ def find_common_items(list1, list2):
 def find_unique_common_items(list1, list2):
     # Produce the set of *unique* common items in two lists.
 
-
+    list1 & list2
 
 def get_sum_zero_pairs(input_list):
     # Given a list of numbers, return list of x,y number pair lists where x + y == 0.
