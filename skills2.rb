@@ -80,30 +80,36 @@ end
 
 puts 'sort_by_word_length failed!' unless sort_by_word_length(["ok", "an", "apple", "a", "day"]) == {2=>["ok", "an"], 5=>["apple"], 1=>["a"], 3=>["day"]}
 
-# def get_pirate_talk(phrase):
-#     # Translate phrase to pirate talk.
-#     # Given a phrase, translate each word to the Pirate-speak equivalent.
-#     # Words that cannot be translated into Pirate-speak should pass through
-#     # unchanged. Return the resulting sentence.
+def get_pirate_talk(phrase)
+    # Translate phrase to pirate talk.
+    # Given a phrase, translate each word to the Pirate-speak equivalent.
+    # Words that cannot be translated into Pirate-speak should pass through
+    # unchanged. Return the resulting sentence.
 
 
-#     pirate_dict = {"    sir": "matey",
-#         "hotel" : "fleabag inn",
-#         "student" : "swabbie",
-#         "boy" : "matey",
-#         "madam" : "proud beauty",
-#         "professor" : "foul blaggart",
-#         "restaurant" : "galley",
-#         "your" : "yer",
-#         "excuse" : "arr",
-#         "students" : "swabbies",
-#         "are": "be",
-#         "lawyer" : "foul blaggart",
-#         "the": "th\'",
-#         "restroom" : "head",
-#         "my": "me",
-#         "hello" : "avast",
-#         "is": "be",
-#         "man": "matey"}
+    pirate_dict = {"    sir": "matey",
+        "hotel" : "fleabag inn",
+        "student" : "swabbie",
+        "boy" : "matey",
+        "madam" : "proud beauty",
+        "professor" : "foul blaggart",
+        "restaurant" : "galley",
+        "your" : "yer",
+        "excuse" : "arr",
+        "students" : "swabbies",
+        "are": "be",
+        "lawyer" : "foul blaggart",
+        "the": "th\'",
+        "restroom" : "head",
+        "my": "me",
+        "hello" : "avast",
+        "is": "be",
+        "man": "matey"}
 
-# end
+    words = phrase.split
+
+    words.each do |word|
+        # replace
+
+
+end
