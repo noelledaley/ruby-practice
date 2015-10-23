@@ -80,6 +80,7 @@ end
 
 puts 'sort_by_word_length failed!' unless sort_by_word_length(["ok", "an", "apple", "a", "day"]) == {2=>["ok", "an"], 5=>["apple"], 1=>["a"], 3=>["day"]}
 
+
 def get_pirate_talk(phrase)
     # Translate phrase to pirate talk.
     # Given a phrase, translate each word to the Pirate-speak equivalent.
@@ -87,29 +88,37 @@ def get_pirate_talk(phrase)
     # unchanged. Return the resulting sentence.
 
 
-    pirate_dict = {"    sir": "matey",
-        "hotel" : "fleabag inn",
-        "student" : "swabbie",
-        "boy" : "matey",
-        "madam" : "proud beauty",
-        "professor" : "foul blaggart",
-        "restaurant" : "galley",
-        "your" : "yer",
-        "excuse" : "arr",
-        "students" : "swabbies",
-        "are": "be",
-        "lawyer" : "foul blaggart",
-        "the": "th\'",
-        "restroom" : "head",
-        "my": "me",
-        "hello" : "avast",
-        "is": "be",
-        "man": "matey"}
+    pirate_dict = {"    sir"=> "matey",
+        "hotel" => "fleabag inn",
+        "student" => "swabbie",
+        "boy" => "matey",
+        "madam" => "proud beauty",
+        "professor" => "foul blaggart",
+        "restaurant" => "galley",
+        "your" => "yer",
+        "excuse" => "arr",
+        "students" => "swabbies",
+        "are"=> "be",
+        "lawyer" => "foul blaggart",
+        "the"=> "th\'",
+        "restroom" => "head",
+        "my"=> "me",
+        "hello" => "avast",
+        "is"=> "be",
+        "man"=> "matey"}
+
+    pirate_phrase = phrase
 
     words = phrase.split
 
     words.each do |word|
-        # replace
+        if pirate_dict.include? word
+            pirate_phrase.gsub!(word, pirate_dict)
+        end
+    end
 
+    pirate_phrase
 
 end
+
+puts 'pirate_talk failed!' unless get_pirate_talk("my student is not a man") == "me swabbie be not a matey"
