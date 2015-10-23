@@ -52,7 +52,9 @@ def encode(phrase)
     # replace "a" characters with "d", replace "t" characters with "o",
     # and "i" characters with "u". Return the encoded string.
 
-    encode = { "e" => "p", "a" => "d", "t" => "o", "i" => "u"}
+    code = { "e" => "p", "a" => "d", "t" => "o", "i" => "u"}
+    new_message = phrase.gsub(/e+|a+|t+|i+/, code)
+
 end
 
 puts 'encode failed!' unless encode("You are a beautiful, talented, brilliant, powerful musk ox.") == 'You drp d bpduouful, odlpnopd, brulludno, powprful musk ox.'
