@@ -36,6 +36,7 @@ end
 
 puts 'find_unique_common_items failed!' unless find_unique_common_items([1, 2, 3, 4], [1, 1, 2, 2]) == [1, 2]
 
+
 def get_sum_zero_pairs(input_list)
     # Given a list of numbers, return list of x,y number pair lists where x + y == 0.
 
@@ -45,11 +46,16 @@ end
 
 puts 'get_zero_sum_pairs failed!' unless get_sum_zero_pairs([7, -7, 0, 3, 5, -3, 1]) == [7, -7, 3, -3]
 
-# def encode(phrase):
-#     # Given a phrase, replace all "e" characters with "p",
-#     # replace "a" characters with "d", replace "t" characters with "o",
-#     # and "i" characters with "u". Return the encoded string.
-# end
+
+def encode(phrase)
+    # Given a phrase, replace all "e" characters with "p",
+    # replace "a" characters with "d", replace "t" characters with "o",
+    # and "i" characters with "u". Return the encoded string.
+
+    encode = { "e" => "p", "a" => "d", "t" => "o", "i" => "u"}
+end
+
+puts 'encode failed!' unless encode("You are a beautiful, talented, brilliant, powerful musk ox.") == 'You drp d bpduouful, odlpnopd, brulludno, powprful musk ox.'
 
 # def sort_by_word_length(words):
 #     # Given list of words, return list of ascending [(len, [words])].
