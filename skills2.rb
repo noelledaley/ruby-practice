@@ -59,10 +59,26 @@ end
 
 puts 'encode failed!' unless encode("You are a beautiful, talented, brilliant, powerful musk ox.") == 'You drp d bpduouful, odlpnopd, brulludno, powprful musk ox.'
 
-# def sort_by_word_length(words):
-#     # Given list of words, return list of ascending [(len, [words])].
-#     # Given a list of words, return a list of tuples, ordered by word-length.
-# end
+
+def sort_by_word_length(words)
+    # Given list of words, return list of ascending [(len, [words])].
+    # Given a list of words, return a list of tuples, ordered by word-length.
+
+    words_lengths = {}
+
+    words.each do |word|
+        if words_lengths.include? word.length
+            words_lengths[word.length] << word
+        else
+            words_lengths[word.length] = [word]
+        end
+    end
+
+    words_lengths
+
+end
+
+puts 'sort_by_word_length failed!' unless sort_by_word_length(["ok", "an", "apple", "a", "day"]) == {2=>["ok", "an"], 5=>["apple"], 1=>["a"], 3=>["day"]}
 
 # def get_pirate_talk(phrase):
 #     # Translate phrase to pirate talk.
